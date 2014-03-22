@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+  <!-- A CSS normalizer -->
+  <link rel='stylesheet' href='../../bower_components/html5-reset/assets/css/reset.css'>
+  <!-- Some more style -->
+  <link rel='stylesheet' href='../../assets/css/main.css'>
+
+  <style>
+    .comments ul {
+      padding-left: 40px;
+      list-style: none;
+    }
+
+    .comments li {
+      list-style: none
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <h1>Comments</h1>
+    <p>
+      This is an example of rendering a nested view using CompositeView. The data is represented as a Node model,
+      which has a reference to a collection of other Nodes. 
+    </p>
+
+    <h1>Example</h1>
+    <div class="comments"></div>
+  </main>
+  
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
+  <script src='../../list-layout.js'></script>
+
+  <script id="recursive-composite-template" type="text/template">
+    <li>name: <%= name %></li>
+  </script>
+
+
+  <!-- Our script; this is where everything happens -->
+  <script src='comments.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+  <!-- A CSS normalizer -->
+  <link rel='stylesheet' href='../../bower_components/html5-reset/assets/css/reset.css'>
+  <!-- Some more style -->
+  <link rel='stylesheet' href='../../assets/css/main.css'>
+</head>
+<body>
+
+  <main>
+
+    <h1>List</h1>
+    <p>
+      Simple list rendered with a collection view.
+    </p>
+
+    <h1>Example</h1>
+    <div class="list"></div>
+  </main>
+  
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
+  <script src='../../list-layout.js'></script>
+
+  <script type='text/template' id='template-color-item'>
+    <li>
+      <%= colorName %>
+    </li>
+  </script>
+
+  <!-- Our script; this is where everything happens -->
+  <script src='list.js'></script>
+  <div class="list"></div>
+
+</body>
+</html>

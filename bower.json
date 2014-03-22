@@ -1,0 +1,27 @@
+{
+  "name": "marionette.list-layout",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jasonLater/marionette.list-layout",
+  "authors": [
+    "Jason Laster jason.laster.11@gmail.com"
+  ],
+  "description": "A pattern around rendering lists",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec",
+    "specs",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.0",
+    "marionette": "~1.7.0",
+    "html5-reset": "~2.1.2"
+  },
+  "resolutions": {
+    "jquery": "~2.1.0"
+  }
+}

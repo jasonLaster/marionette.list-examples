@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Marionette Examples: Rendering Lists</title>
+  <!-- A CSS normalizer -->
+  <link rel='stylesheet' href='../../bower_components/html5-reset/assets/css/reset.css'>
+  <!-- Some more style -->
+  <link rel='stylesheet' href='../../assets/css/main.css'>
+</head>
+<body>
+
+  <main>
+
+    <h1>Table with Seperate Empty State</h1>
+    <p>
+      This table is rendered with a ListLayout. The difference here, is that when the collection is empty, the table will be replaced by a seperate empty state view.
+    </p>
+
+
+    <h1>Example</h1>
+    
+    <div class="list"></div>
+  </main>
+  
+  <!-- Install our three dependencies -->
+  <script src='../../bower_components/jquery/dist/jquery.js'></script>
+  <script src='../../bower_components/underscore/underscore.js'></script>
+  <script src='../../bower_components/backbone/backbone.js'></script>
+
+  <!-- Don't forget Marionette! -->
+  <script src='../../bower_components/marionette/lib/backbone.marionette.js'></script>
+  <script src='../../list-layout.js'></script>
+
+  <script type='text/template' id='template-list-layout'>
+      <div>
+          <button id="add">List</button> 
+          <button id="clear">Clear</button>
+      </button>
+      <div class="content-region"></div>
+  </script>
+
+  <script type='text/template' id='template-table'>
+      <thead>
+          <td>Color</td>
+          <td>Hex</td>
+      </thead>
+      <tbody>
+      </tbody>
+  </script>
+
+  <script type='text/template' id='template-color-item'>
+      <td><%= colorName %> </td>
+      <td><%= hex %></td>
+  </script>
+
+  <script type='text/template' id='template-empty-state'>
+      <h1>The list is Empty</h1>
+  </script>
+
+  <!-- Our script; this is where everything happens -->
+  <script src='list-with-emptystate.js'></script>
+  <div class="table"></div>
+
+</body>
+</html>
